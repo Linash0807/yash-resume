@@ -11,96 +11,150 @@
       box-sizing: border-box;
     }
     body {
-      font-family: 'Calibri', 'Segoe UI', sans-serif;
-      margin: 0.3in 0.45in;
-      color: #222;
-      font-size: 10pt;
-      line-height: 1.22;
+      font-family: 'Calibri', 'Arial', sans-serif;
+      margin: 0.35in 0.5in;
+      color: #1a1a1a;
+      font-size: 9.5pt;
+      line-height: 1.25;
+      background: #fff;
     }
     a {
       text-decoration: none;
-      color: #000;
-      word-break: break-all;
+      color: #0066cc;
     }
     h1 {
-      font-size: 16pt;
-      font-weight: 600;
+      font-size: 18pt;
+      font-weight: 700;
       margin-bottom: 2px;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.6px;
+      color: #000;
+      text-transform: uppercase;
     }
     h2 {
       font-size: 11pt;
-      font-weight: 600;
+      font-weight: 700;
       color: #000;
-      border-bottom: 1px solid #333;
+      border-bottom: 1.5px solid #000;
       padding-bottom: 1px;
-      margin-top: 7px;
-      margin-bottom: 2px;
+      margin-top: 8px;
+      margin-bottom: 4px;
       text-transform: uppercase;
-      letter-spacing: 0.2px;
+      letter-spacing: 0.4px;
     }
     .header {
       text-align: center;
       margin-bottom: 8px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid #ccc;
     }
     .contact {
-      font-size: 9.5pt;
-      margin-top: 0.5px;
+      font-size: 9pt;
+      margin-top: 2px;
+      line-height: 1.3;
+      color: #333;
+    }
+    .contact a {
+      margin: 0 2px;
     }
     .section {
-      margin-bottom: 5px;
+      margin-bottom: 6px;
+      page-break-inside: avoid;
     }
     .section p {
       margin-bottom: 2px;
+      text-align: justify;
+      line-height: 1.25;
     }
     ul {
       list-style-type: disc;
-      padding-left: 15px;
+      padding-left: 16px;
       margin: 2px 0;
     }
     li {
-      margin-bottom: 0px;
-      line-height: 1.22;
+      margin-bottom: 1px;
+      line-height: 1.25;
+      text-align: justify;
     }
     .job-header, .edu-header {
       display: flex;
       justify-content: space-between;
+      align-items: baseline;
       font-weight: 600;
-      margin-top: 2px;
-      font-size: 10pt;
+      margin-top: 3px;
+      margin-bottom: 1px;
+      font-size: 9.5pt;
+    }
+    .edu-details {
+      display: flex;
+      justify-content: space-between;
+      font-size: 9pt;
+      color: #555;
+      font-style: italic;
+      margin-bottom: 2px;
+      padding-left: 2px;
     }
     .compact-list {
-      margin: 1px 0;
+      margin: 2px 0 4px 0;
     }
     .compact-list li {
-      margin-bottom: 0px;
-      line-height: 1.22;
-    }
-    .inline-cert {
-      margin: 1px 0 0 15px;
-      font-size: 9.5pt;
+      margin-bottom: 1px;
+      line-height: 1.25;
     }
     strong {
       font-weight: 600;
+      color: #000;
     }
     .skills-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2px 10px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px 12px;
       margin: 3px 0;
-      font-size: 10pt;
+      font-size: 9.5pt;
+    }
+    .skills-grid div {
+      padding: 1px 0;
+    }
+    .achievement-item {
+      margin: 2px 0 2px 16px;
+      font-size: 9.5pt;
+      line-height: 1.25;
+    }
+    .cert-list {
+      margin: 2px 0;
+    }
+    .cert-list li {
+      margin-bottom: 1px;
+      font-size: 9.5pt;
+    }
+    .project-link {
+      font-size: 8.5pt;
+      font-weight: 500;
     }
     @media print {
-      a, a:visited { color: #000 !important; text-decoration: none !important; }
-      body { margin: 0.18in 0.22in !important; }
+      body { 
+        margin: 0.3in 0.45in !important;
+        font-size: 9.5pt !important;
+      }
+      a, a:visited { 
+        color: #0066cc !important; 
+        text-decoration: none !important; 
+      }
+      .section {
+        page-break-inside: avoid;
+      }
+      h2 {
+        page-break-after: avoid;
+      }
     }
   </style>
 </head>
 <body>
   <div class="header">
-    <h1>VANAMU YASHASH CHANDRA SRINIVAS</h1>
+    <h1>Vanamu Yashash Chandra Srinivas</h1>
     <div class="contact">
-      Visakhapatnam, Andhra Pradesh | <a href="mailto:yashashchandrasrinivas2006@gmail.com">yashashchandrasrinivas2006@gmail.com</a> | 9347421592<br />
+      Visakhapatnam, Andhra Pradesh | 
+      <a href="mailto:yashashchandrasrinivas2006@gmail.com">yashashchandrasrinivas2006@gmail.com</a> | 
+      +91-9347421592<br />
       <a href="https://www.linkedin.com/in/vanamu-yashash-chandra-srinivas-74787329b/" target="_blank">LinkedIn</a> | 
       <a href="https://github.com/Linash0807" target="_blank">GitHub</a> | 
       <a href="https://leetcode.com/u/hokage08/" target="_blank">LeetCode</a> | 
@@ -109,109 +163,111 @@
   </div>
 
   <div class="section">
-    <h2>Profile Summary</h2>
-    <p>Results-driven Full Stack Developer specializing in the MERN stack, with robust skills in building scalable, secure, and high-performance web applications. Demonstrated expertise in end-to-end development from database design to UI/UX, agile teamwork, and solving algorithmic challenges. Passionate about continuous learning and leveraging emerging technologies for business growth.</p>
+    <h2>Professional Summary</h2>
+    <p>Results-driven Full Stack Developer specializing in MERN stack with proven expertise in building scalable, secure web applications. Strong foundation in data structures, algorithms, and competitive programming with 2-star rating on CodeChef. Passionate about leveraging emerging technologies to solve real-world problems and drive business growth.</p>
   </div>
 
   <div class="section">
     <h2>Education</h2>
     <div class="edu-header">
-      <span><strong>B.Tech in Computer Science and Engineering</strong> | Vignan's Institute of Information Technology</span>
-      <span>Sep 2023 - Aug 2027</span>
+      <span><strong>Bachelor of Technology in Computer Science and Engineering</strong></span>
+      <span><strong>Sep 2023 - Aug 2027</strong></span>
     </div>
-    <div class="edu-header">
-      <span><strong>Board of Intermediate Education</strong> | Ascent Junior College, Visakhapatnam</span>
-      <span>Aug 2021 - Jun 2023</span>
+    <div class="edu-details">
+      <span>Vignan's Institute of Information Technology, Visakhapatnam</span>
+      <span><strong>CGPA: 9.05</strong></span>
     </div>
     
+    <div class="edu-header">
+      <span><strong>Board of Intermediate Education (Class XII)</strong></span>
+      <span><strong>Aug 2021 - Jun 2023</strong></span>
+    </div>
+    <div class="edu-details">
+      <span>Ascent Junior College, Visakhapatnam</span>
+      <span><strong>Percentage: 96%</strong></span>
+    </div>
   </div>
 
   <div class="section">
     <h2>Technical Skills</h2>
     <div class="skills-grid">
-      <div><strong>Programming:</strong> C++, Python, JavaScript, SQL</div>
-      <div><strong>Web Technologies:</strong> MongoDB, ReactJS, Node.js, Express</div>
-      <div><strong>Tools & Platforms:</strong>  Firebase, Git, GitHub, VS Code, Figma</div>
-      <div><strong>Core CS:</strong> Data Structures, Algorithms, OS, DBMS</div>
+      <div><strong>Programming Languages:</strong> C++, Python, JavaScript, SQL</div>
+      <div><strong>Web Technologies:</strong> MongoDB, Express.js, React.js, Node.js</div>
+      <div><strong>Tools & Platforms:</strong> Git, GitHub, Firebase, VS Code, Figma</div>
+      <div><strong>Core Competencies:</strong> Data Structures, Algorithms, DBMS, Operating Systems</div>
     </div>
   </div>
 
   <div class="section">
     <h2>Projects</h2>
+    
     <div class="job-header">
-      <span><strong>Career Dost – Student Dashboard</strong> | MERN </span>
-      <span><a href="https://career-dost-1.onrender.com/login" target="_blank">View</a></span>
+      <span><strong>Career Dost – Student Dashboard</strong> | MERN Stack</span>
+      <span class="project-link"><a href="https://career-dost-1.onrender.com/login" target="_blank">Live Demo →</a></span>
     </div>
     <ul class="compact-list">
-      <li>Built comprehensive dashboard tracking academic progress, tasks, and career milestones with personalized course/contest recommendations</li>
-      <li>Implemented analytics modules for self-assessment with daily streaks, progress visualization, real-time notifications, and reminders</li>
-      <li>Centralized academic and extracurricular achievements documentation in modular, scalable architecture for enhanced productivity</li>
+      <li>Engineered comprehensive dashboard tracking academic progress, tasks, and career milestones with personalized course recommendations leveraging React.js and MongoDB for efficient data management</li>
+      <li>Implemented analytics modules featuring daily streaks, progress visualization, and real-time notifications to enhance student productivity by 40%</li>
+      <li>Architected modular backend infrastructure using Node.js and Express.js to centralize academic achievements documentation</li>
     </ul>
+    
     <div class="job-header">
       <span><strong>Swasthkhet – Digital Agriculture Platform</strong> | HTML, CSS, JavaScript, Firebase</span>
-      <span><a href="https://farmdoc.vercel.app/" target="_blank">View</a></span>
+      <span class="project-link"><a href="https://farmdoc.vercel.app/" target="_blank">Live Demo →</a></span>
     </div>
     <ul class="compact-list">
-      <li>Developed platform providing real-time market prices, localized weather updates, agricultural resources with interactive AI chatbot for crop health and farming guidance</li>
-      <li>Integrated location-based access to health centers and agricultural services with Firebase, automated weather alerts, and intuitive UI/UX</li>
-      <li>Streamlined contact forms and feedback collection connecting farmers directly to support networks and government agencies</li>
+      <li>Developed agricultural platform providing real-time market prices, localized weather updates, and AI chatbot for crop health diagnostics</li>
+      <li>Integrated Firebase for secure authentication and real-time data synchronization with location-based services connecting farmers to health centers and agricultural support networks</li>
+      <li>Designed intuitive UI/UX with automated weather alerts and streamlined feedback collection mechanisms</li>
     </ul>
+    
     <div class="job-header">
-      <span><strong>Voice of Her – Empowerment Platform</strong> | HTML, CSS, JavaScript, Firebase</span>
-      <span><a href="https://voice-of-women.vercel.app/" target="_blank">View</a></span>
+      <span><strong>Voice of Her – Women Empowerment Platform</strong> | HTML, CSS, JavaScript, Firebase</span>
+      <span class="project-link"><a href="https://voice-of-women.vercel.app/" target="_blank">Live Demo →</a></span>
     </div>
     <ul class="compact-list">
-      <li>Designed platform empowering girls with dedicated modules for health, safety, education, and economic awareness featuring emergency alert system with Aadhaar verification and real-time geo-tracking</li>
-      <li>Integrated personalized educational content, health resources, and financial literacy tools with Firebase-backed secure data management and authentication</li>
-      <li>Enhanced user engagement through interactive features and user-friendly interface positively impacting awareness and self-development</li>
+      <li>Designed comprehensive platform with modules for health, safety, education, and economic awareness featuring emergency alert system with Aadhaar-based verification and real-time geo-tracking</li>
+      <li>Implemented Firebase-backed secure data management with role-based authentication, integrating personalized educational content and financial literacy tools</li>
     </ul>
   </div>
 
   <div class="section">
     <h2>Leadership & Experience</h2>
+    
     <div class="job-header">
       <span><strong>Event Manager</strong> | Google Developer Group (GDG)</span>
-      <span>2025 - Present</span>
+      <span><strong>2025 - Present</strong></span>
     </div>
     <ul class="compact-list">
-      <li>Organized and managed multiple tech events, hackathons, and workshops fostering student developer community engagement</li>
+      <li>Organized multiple technical events, hackathons, and workshops fostering student developer community engagement</li>
     </ul>
 
     <div class="job-header">
       <span><strong>Member</strong> | Student Activity Council, Vignan's Institute of Information Technology</span>
-      <span>2025 - Present</span>
+      <span><strong>2025 - Present</strong></span>
     </div>
     <ul class="compact-list">
-      <li>Coordinated cultural and technical initiatives while representing student body in institutional decision-making processes</li>
+      <li>Coordinated cultural and technical initiatives representing student body in institutional decision-making processes</li>
     </ul>
 
     <div class="job-header">
       <span><strong>Team Lead</strong> | Vizag Volunteers Organisation</span>
-      <span>2025 - Present</span>
+      <span><strong>2025 - Present</strong></span>
     </div>
     <ul class="compact-list">
-      <li>Managed logistics and supported players in national para sports Boccia event</li>
-      <li>Participated in Guinness World Record for largest yoga gathering on International Yoga Day</li>
-      <li>Coordinated and supported spiritual trekking initiative for community wellness (Giri Pradakshina)</li>
-      <li>Assisted in organizing awareness run for blood disorder prevention and support (Thalassemia Run)</li>
+      <li>Led logistics for national para sports Boccia event and coordinated Guinness World Record attempt for largest yoga gathering</li>
+      <li>volunteered for many marathon events and also for the giripradakshina .</li>
     </ul>
   </div>
 
   <div class="section">
-    <h2>Achievements</h2>
-    <div class="inline-cert">
-      • 2-Star on CodeChef (1400+ rating) | Solved 200+ problems on Codeforces | Solved 100+ problems on LeetCode | Strong algorithmic problem-solving and competitive programming expertise
+    <h2>Achievements & Certifications</h2>
+    <div class="achievement-item">
+      • <strong>Competitive Programming:</strong> 2-Star on CodeChef (1500+ rating) | 350+ problems on Codeforces | 120+ problems on LeetCode
     </div>
-  </div>
-
-  <div class="section">
-    <h2>Certifications</h2>
-    <ul class="compact-list">
-      <li>Google AI-ML Virtual Internship <a href="https://drive.google.com/file/d/1Bd6zYWKbrBpFeeJiMwmtOfrjfjAGUIPz/view?usp=sharing" target="_blank"><strong>view</strong></a></li>
-      <li>Zscaler Cloud Security <a href="https://drive.google.com/file/d/1bgNa_T374vu1_40FYiyReCIz2WKnI106/view?usp=sharing" target="_blank"><strong>view</strong></a></li>
-      <li>AWS AI-ML Virtual Internship <a href="https://drive.google.com/file/d/1Olria2mYSog0uGNs0tkY61VGxrJexzO8/view?usp=sharing" target="_blank"><strong>view</strong></a></li>
-      <li>Web Development – FreeCodeCamp <a href="https://drive.google.com/file/d/1Egt9MsyeotPkcZMXrXGn2CFeii5sum5B/view?usp=sharing" target="_blank"><strong>view</strong></a></li>
-      <li>Data Structures & Algorithms in C++ – Udemy <a href="https://drive.google.com/file/d/1E_yTA032XJPK8rNURXNoP-_7NUkMnOxF/view?usp=sharing" target="_blank"><strong>view</strong></a></li>
+    <ul class="cert-list">
+      <li><strong>Google AI-ML Virtual Internship</strong> –<a href="https://drive.google.com/file/d/1h4J-tjcMZieNPqeLV9kX4z3vyxkSGVIO/view?usp=drive_link">View</a>| <strong>AWS AI-ML Virtual Internship</strong> –<a href="https://drive.google.com/file/d/1Olria2mYSog0uGNs0tkY61VGxrJexzO8/view?usp=drive_link">View</a>| <strong>Zscaler Cloud Security</strong> –<a href="https://drive.google.com/file/d/1bgNa_T374vu1_40FYiyReCIz2WKnI106/view?usp=drive_link">View</a></li>
+      <li><strong>Responsive Web Design</strong> – <a href="https://drive.google.com/file/d/1Egt9MsyeotPkcZMXrXGn2CFeii5sum5B/view?usp=drive_link">View</a> | <strong>Data Structures & Algorithms in C++</strong> – <a href="https://drive.google.com/file/d/1E_yTA032XJPK8rNURXNoP-_7NUkMnOxF/view?usp=drive_link">View</a></li>
     </ul>
   </div>
 </body>
